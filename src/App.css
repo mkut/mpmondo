@@ -1,38 +1,145 @@
 .App {
-  text-align: center;
+   text-align: center;
+   background-color: #282c34;
+   min-height: 100vh;
+   color: white;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   padding-top: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input {
+   width: 600px;
+   background-color: #444853;
+   height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input textarea {
+   width: 400px;
+   height: 80px;
+   background-color: #7b8288;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input .header {
+   background-color: #2a344e;
+   display: flex;
+   cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.input .header :not(.symbol) {
+   flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input .header .symbol {
+   width: 60px;
+}
+
+.current-player {
+   margin-top: 100px;
+   width: 500px;
+   height: 20px;
+   border-radius: 10px;
+   background-color: #2a344e;
+}
+
+.current-player.owner-1 {
+   border: none;
+   background-color: #457258;
+}
+.current-player.owner-2 {
+   border: none;
+   background-color: #725e45;
+}
+.current-player.owner-3 {
+   border: none;
+   background-color: #454872;
+}
+.current-player.owner-4 {
+   border: none;
+   background-color: #72454f;
+}
+
+.panels {
+   margin-top: 10px;
+   width: 500px;
+   display: flex;
+   justify-content: center;
+}
+
+.panels .wrapper {
+   width: 440px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.panels .panel {
+   cursor: pointer;
+   margin: 2px;
+   width: 40px;
+   height: 40px;
+   border: 1px solid #7b8288;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.panels .panel:not(.visible) {
+   color: #00000000;
+}
+
+.panels .panel.owner-1 {
+   background-color: #457258;
+}
+
+.panels .panel.owner-2 {
+   background-color: #725e45;
+}
+
+.panels .panel.owner-3 {
+   background-color: #454872;
+}
+
+.panels .panel.owner-4 {
+   background-color: #72454f;
+}
+
+.panels .panel:hover {
+   background-color: #7b8288;
+}
+
+.toolbar {
+   margin-top: 40px;
+   width: 500px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.toolbar .button {
+   width: 60px;
+   height: 30px;
+   border-radius: 10px;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #7b8288;
+   cursor: pointer;
+}
+
+.toolbar .button.owner-null {
+   background-color: #2a344e;
+}
+.toolbar .button.owner-1 {
+   background-color: #457258;
+}
+.toolbar .button.owner-2 {
+   background-color: #725e45;
+}
+.toolbar .button.owner-3 {
+   background-color: #454872;
+}
+.toolbar .button.owner-4 {
+   background-color: #72454f;
 }
